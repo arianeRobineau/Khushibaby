@@ -31,6 +31,46 @@
 		text-align:center;
 	}
 
+	#section1 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 43%;
+
+		/*
+		* Preventing flicker on some browsers
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section0{
+		overflow: hidden;
+	}
+
+	#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+	}
+
+
+
 	/* Overwriting styles for control arrows for slides
 	* --------------------------------------- */
 	.controlArrow.prev {
@@ -97,9 +137,12 @@
 
 
 	<div class="section " id="section1">
-		<div class="intro" >
-			<h1 style="color:#fff">This is only a test I promise !</h1>
-			<p style="color:#fff">Lets' check something</p>
+		<video id="myVideo" loop muted data-autoplay>
+			<source src="imgs/flowers.mp4" type="video/mp4">
+			<source src="imgs/flowers.webm" type="video/webm">
+		</video>
+		<div class="layer">
+			<h1>India has huge sanitary issues</h1>
 		</div>
 	</div>
 
