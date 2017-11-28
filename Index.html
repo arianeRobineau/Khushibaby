@@ -22,7 +22,7 @@
 		margin:0;
 	}
 	.intro p{
-		color: #fff;
+		color: #000;
 	}
 
 	/* Centered texts in each section
@@ -45,6 +45,23 @@
 		-webkit-transform: translate3d(0,0,0);
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
+	}
+
+	#conteneur {
+		overflow: auto
+	}
+	#gauche {
+		float: left;
+		width: 68%;
+		margin-left: -200px;
+		margin-top: 80px;
+	}
+	#contenu {
+		float: right;
+		width: 35%;
+		margin-top: 175px;
+		margin-right: 130px;
+		overflow: hidden;
 	}
 
 	/*solves problem with overflowing video in Mac with Chrome */
@@ -149,10 +166,19 @@
 
 
 	<div class="section" id="section2">
-		<div class="intro">
+		<div class="conteneur">
 			<h1 style="color:#308256">Infant mortality is a real problem in India</h1>
 
-			<div id="canvas-holder" style="width:70%">
+			<div id="contenu">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+				irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+				nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+				officia deserunt mollit anim id est laborum.</p>
+			</div>
+
+			<div id="gauche">
         <canvas id="chart-area"></canvas>
     	</div>
 
