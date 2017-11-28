@@ -150,7 +150,7 @@
 
 	<div class="section" id="section2">
 		<div class="intro">
-			<h1 style="color:#308256">This is (not) the end</h1>
+			<h1 style="color:#308256">Infant mortality is a real problem in India</h1>
 
 			<div id="canvas-holder" style="width:70%">
         <canvas id="chart-area"></canvas>
@@ -166,11 +166,12 @@
 			        data: {
 			            datasets: [{
 			                data: [
-			                    50,
-			                    10,
-			                    80,
-			                    8,
-			                    60,
+			                    35 ,
+			                    3,
+													9,
+													34 ,
+			                    6,
+			                    14,
 			                ],
 			                backgroundColor: [
 												color(chartColors.red).alpha(0.5).rgbString(),
@@ -182,11 +183,12 @@
 			                label: 'My dataset' // for legend
 			            }],
 			            labels: [
-			                "Country1",
-			                "Country2",
-			                "Country3",
-			                "Country4",
-			                "Country5"
+			                "India",
+			                "France",
+											"China" ,
+											"Sénégal" ,
+			                "United States",
+			                "Brasil"
 			            ]
 			        },
 			        options: {
@@ -197,7 +199,7 @@
 			            },
 			            title: {
 			                display: true,
-			                text: 'Mortality Rate'
+			                text: 'Mortality Rate in 2016 (for 1000 living birth)'
 			            },
 			            scale: {
 			              ticks: {
@@ -206,7 +208,7 @@
 			              reverse: false
 			            },
 			            animation: {
-			                animateRotate: false,
+			                animateRotate: true,
 			                animateScale: true
 			            }
 			        }
