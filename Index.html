@@ -69,6 +69,7 @@
 		overflow: hidden;
 	}
 
+
 	#myVideo{
 		position: absolute;
 		right: 0;
@@ -125,11 +126,11 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'secondPage', '3rdPage'],
-				sectionsColor: ['#FFFFFF', '#308256', '#FFFFFF'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+				sectionsColor: ['#FFFFFF', '#009A00', '#FFFFFF', '#009A00','#FFFFFF', '#009A00','#FFFFFF','#009A00','#FFFFFF',],
 				navigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['First page', 'Second page', 'Third and last page']
+				navigationTooltips: ['1st page', '2nd page', '3rd page', '4th Page', '5th Page', '6th Page', '7thPage']
 			});
 		});
 	</script>
@@ -147,8 +148,8 @@
 
 	<div class="section " id="section0">
 		<div class="intro" >
-			<h1 style="color:#308256">Khushi Baby</h1>
-			<p style="color:#308256">Data to save lives</p>
+			<img src="imgs/logo.png"/>
+			<h1 style="color:#009A00">Data to save lives</h1>
 		</div>
 	</div>
 
@@ -156,7 +157,6 @@
 	<div class="section " id="section1">
 		<video id="myVideo" loop muted data-autoplay>
 			<source src="imgs/sanCrisis.mp4" type="video/mp4">
-
 		</video>
 		<div class="layer">
 			<h1>India has huge sanitary issues</h1>
@@ -167,10 +167,11 @@
 
 	<div class="section" id="section2">
 		<div class="conteneur">
-			<h1 style="color:#308256">Infant mortality is a real problem in India</h1>
+			<h1 style="color:#009A00">Infant mortality is a real problem in India</h1>
 
 			<div id="contenu">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
 				irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
@@ -273,6 +274,35 @@
 			    });
     </script>
 
+		</div>
+	</div>
+
+	<div class="section" id="section1">
+		<video id="myVideo" loop muted data-autoplay>
+			<source src="imgs/flowers.mp4" type="video/mp4">
+
+		</video>
+		<div class="layer">
+			<h1>1,5 Million children die every year because they are not vaccinated</h1>
+			<p>Here a compilation of Indian children videos</p>
+		</div>
+	</div>
+
+	<div class="section" id="section0">
+		<div id="conteneur">
+			<h1 style="color:#009A00">Could you guess right how many children are not vaccinated in India ?</h1>
+			<div id="contenu">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+				irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+				nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+				officia deserunt mollit anim id est laborum.</div>
+			<div id="gauche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+				irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+				nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+				officia deserunt mollit anim id est laborum.</div>
 		</div>
 	</div>
 
