@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/examples.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <script>$("#input-id").rating();</script>
 
 	<style>
 
@@ -27,6 +28,25 @@
 
 	p {
 		font-size: 1em;
+	}
+
+	/* nice stars
+	* --------------------------------------- */
+	.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+	}
+	.rating > span {
+	  display: inline-block;
+	  position: relative;
+	  width: 0.75em;
+		font-size: 4em;
+		line-height: 0.75em;
+	}
+	.rating > span:hover:before,
+	.rating > span:hover ~ span:before {
+	   content: "\263B";
+	   position: absolute;
 	}
 
 	/* nice tabs
@@ -294,133 +314,122 @@
 
 	<div class="section" id="section1">
 		<h1 style="color:#009A00">Can you guess how many children are not vaccinated in India ?</h1>
-		<center>
-			<table id="tableau" >
-	      <tbody>
-	        <tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-	        </tr>
-	        <tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-	        </tr>
-	        <tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-	        </tr>
-					<tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-	        </tr>
-	        <tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-	        </tr>
-	        <tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-	        </tr>
-					<tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-	        </tr>
-	        <tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-	        </tr>
-	        <tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-	        </tr>
-					<tr>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-						<td><input type="image" src="imgs/babyB.svg" /></td>
-					</tr>
-	    </tbody>
-			</table>
-		</center>
+
+		<div class="rating">
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+		</div>
+
 	</div>
+
+
 
 	<div class="section" id="section1">
 		<h1 style="color:#fff">This comes from particular factor</h1>
@@ -430,6 +439,11 @@
 	<div class="section" id="section0">
 		<h1 style="color:#009A00">Lack of access</h1>
 		<p>Visualization: number of doctors/center per inhabitants</p>
+
+
+
+
+
 	</div>
 
 	<div class="section" id="section1">
