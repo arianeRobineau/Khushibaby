@@ -9,20 +9,50 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/examples.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
+	 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <script>$("#input-id").rating();</script>
 
 	<style>
 
 	/* Style for our header texts
 	* --------------------------------------- */
 	h1{
-		font-size: 5em;
+		font-size: 4em;
 		font-family: arial,helvetica;
 		color: #fff;
 		margin:0;
 	}
 	.intro p{
 		color: #000;
+	}
+
+	p {
+		font-size: 1em;
+	}
+
+	/* nice stars
+	* --------------------------------------- */
+	.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+	}
+	.rating > span {
+	  display: inline-block;
+	  position: relative;
+	  width: 0.75em;
+		font-size: 4em;
+		line-height: 0.75em;
+	}
+	.rating > span:hover:before,
+	.rating > span:hover ~ span:before {
+	   content: "\263B";
+	   position: absolute;
+	}
+
+	/* nice tabs
+	* --------------------------------------- */
+	th, td {
+	    padding: 1px;
 	}
 
 	/* Centered texts in each section
@@ -169,18 +199,19 @@
 		<div class="conteneur">
 			<h1 style="color:#009A00">Infant mortality is a real problem in India</h1>
 
-			<div id="contenu">
-				<p>
-					According to the WHO, 5.6 million children under the age of 5 years died in 2016. This translates into 15 000 under-five deaths per day. More than half of these early child deaths are due to conditions that could be prevented or treated with access to simple, affordable interventions.
+
+			<table>
+				<tr>
+					<td width="30%">According to the WHO, 5.6 million children under the age of 5 years died in 2016. This translates into 15 000 under-five deaths per day. More than half of these early child deaths are due to conditions that could be prevented or treated with access to simple, affordable interventions.
 					Leading causes of death in children under-5 years are preterm birth complications, pneumonia, birth asphyxia, diarrhoea and malaria.
 					India is no exception. Despite the Indian government’s efforts to reduce the infant mortality rate, many children still die every year from poor sanitation and a lack of access to basic medical needs. India’s infant mortality is 6 times higher than that of China, and 10 times higher than in France. Rural and isolated areas are the most affected.
+					</td>
+					<td width="70%">
+						<canvas id="chart-area"></canvas>
+					</td>
+				</tr>
+			</table>
 
-</p>
-			</div>
-
-			<div id="gauche">
-        <canvas id="chart-area"></canvas>
-    	</div>
 
 	    <script>
 			    var randomScalingFactor = function() {
@@ -191,14 +222,7 @@
 			    var config = {
 			        data: {
 			            datasets: [{
-			                data: [
-			                    35 ,
-			                    3,
-													9,
-													34 ,
-			                    6,
-			                    14,
-			                ],
+			                data: [35,3,9,34,6,14,],
 			                backgroundColor: [
 												color(chartColors.red).alpha(0.5).rgbString(),
 												color(chartColors.orange).alpha(0.5).rgbString(),
@@ -271,7 +295,7 @@
 			        });
 			        window.myPolarArea.update();
 			    });
-    </script>
+    	</script>
 
 		</div>
 	</div>
@@ -287,31 +311,139 @@
 		</div>
 	</div>
 
-	<div class="section" id="section0">
-		<div id="conteneur">
-			<h1 style="color:#009A00">Could you guess right how many children are not vaccinated in India ?</h1>
-			<div id="contenu">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-				irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-				nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-				officia deserunt mollit anim id est laborum.</div>
-			<div id="gauche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-				exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-				irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-				nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-				officia deserunt mollit anim id est laborum.</div>
+
+	<div class="section" id="section1">
+		<h1 style="color:#009A00">Can you guess how many children are not vaccinated in India ?</h1>
+
+		<div class="rating">
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<br>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
+			<span>&#9786;</span>
 		</div>
+
 	</div>
+
+
 
 	<div class="section" id="section1">
 		<h1 style="color:#fff">This comes from particular factor</h1>
+
 	</div>
 
 	<div class="section" id="section0">
 		<h1 style="color:#009A00">Lack of access</h1>
 		<p>Visualization: number of doctors/center per inhabitants</p>
+
+
+
+
+
 	</div>
 
 	<div class="section" id="section1">
