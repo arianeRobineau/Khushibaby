@@ -14,31 +14,38 @@
 
 	<style>
 
+	@font-face {
+    font-family: "ever";
+    src: url("css/EVERAFTE.ttf") format("truetype");
+	}
+	@font-face {
+    font-family: "roboto";
+    src: url("css/Roboto-Light.ttf") format("truetype");
+	}
 	/* Style for our header texts
 	* --------------------------------------- */
-	h1 {
-		font-size: 4em;
-		font-family: "aliens and cows", "Lucida Grande", sans-serif;
-		color: #000;
-		margin:0;
+	div {
+		position: absolute;
+		margin-top: 0px;
 	}
 
-	.intro p {
+	h1 {
+		font-size: 5em;
+		font-family: "ever", sans-serif;
 		color: #000;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	p {
-		font-size: 1.5em;
+		font-size: 1.75em;
+		font-family: "roboto", sans-serif;
 	 	padding: 80px;
 		color:#000;
 		text-align: justify;
 		text-align-last: center;
 	}
 
-	h5 {
-		padding: 40px;
-		text-align: justify;
-	}
 
 	/* nice faces being selected or not
 	* --------------------------------------- */
@@ -61,10 +68,6 @@
 
 	/* Centered texts in each section
 	* --------------------------------------- */
-	.section{
-		text-align:center;
-		top: 10px;
-	}
 
 	#section1 .layer{
 		position: absolute;
@@ -82,22 +85,6 @@
 		transform: translate3d(0,0,0);
 	}
 
-	#conteneur {
-		overflow: auto
-	}
-	#gauche {
-		float: left;
-		width: 68%;
-		margin-left: -200px;
-		margin-top: 10px;
-	}
-	#contenu {
-		float: right;
-		width: 35%;
-		margin-top: 10px;
-		margin-right: 130px;
-		overflow: hidden;
-	}
 
 	/*solves problem with overflowing video in Mac with Chrome */
 	#section0{
@@ -181,7 +168,7 @@
 <div id="fullpage">
 
 
-	<div class="section " id="section1">
+	<div class="section" id="section1">
 		<img width="600" src="imgs/logo1.png"/>
 	</div>
 
@@ -191,20 +178,18 @@
 			<source src="imgs/sanCrisis.mp4" type="video/mp4">
 		</video>
 		<div class="layer">
-			<h1>India has huge sanitary issues</h1>
+			<h1 id="fixe">India has huge sanitary issues</h1>
 		</div>
 	</div>
 
 
 
 	<div class="section" id="section1">
-		<div class="conteneur">
 			<h1>Infant mortality is a real problem in India</h1>
 
-
-			<table class="1st visu">
+			<table align="center">
 				<tr>
-					<td width="800"  align="justify" style="padding-left:150px; padding-right:80px;">According to the WHO, 5.6 million children under the age of 5 years died in 2016. This translates into 15 000 under-five deaths per day. More than half of these early child deaths are due to conditions that could be prevented or treated with access to simple, affordable interventions.
+					<td width="800"  align="justify" style="padding:50px;">According to the WHO, 5.6 million children under the age of 5 years died in 2016. This translates into 15 000 under-five deaths per day. More than half of these early child deaths are due to conditions that could be prevented or treated with access to simple, affordable interventions.
 					Leading causes of death in children under-5 years are preterm birth complications, pneumonia, birth asphyxia, diarrhoea and malaria.
 					India is no exception. Despite the Indian government’s efforts to reduce the infant mortality rate, many children still die every year from poor sanitation and a lack of access to basic medical needs. India’s infant mortality is 6 times higher than that of China, and 10 times higher than in France. Rural and isolated areas are the most affected.
 					</td>
@@ -297,8 +282,6 @@
 			        window.myPolarArea.update();
 			    });
     	</script>
-
-		</div>
 	</div>
 
 	<div class="section" id="section1">
@@ -307,7 +290,7 @@
 
 		</video>
 		<div class="layer">
-			<h1>1,5 Million children die every year because they are not vaccinated</h1>
+			<h1 id="fixe">1,5 Million children die every year because they are not vaccinated</h1>
 			<p>Here a compilation of Indian children videos</p>
 		</div>
 	</div>
@@ -315,174 +298,172 @@
 
 	<div class="section" id="section1">
 		<h1>Do you know the percentage of Indian children who are not vaccinated ?</h1>
-	<br>
-		<table width="80%">
-		<tr>
-			<td align="right" width="40%">
-				<p style="font-size:2em; color:grey">&#9787; Your guess</p>
-				<p style="font-size:2em; color:red">&#9786; The truth</p>
-			</td>
-			<td padding-right="150px">
-				<div class="rating">
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<br>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<br>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<br>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<br>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<br>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<br>
-					<span onclick="showResult()">&#9786;</span>
-					<span onclick="showResult()">&#9786;</span>
-					<span id="show30" onclick="showResult()">&#9786;</span>
-					<span id="show31" onclick="showResult()">&#9786;</span>
-					<span id="show32" onclick="showResult()">&#9786;</span>
-					<span id="show33" onclick="showResult()">&#9786;</span>
-					<span id="show34" onclick="showResult()">&#9786;</span>
-					<span id="show35" onclick="showResult()">&#9786;</span>
-					<span id="show36" onclick="showResult()">&#9786;</span>
-					<span id="show37" onclick="showResult()">&#9786;</span>
-					<br>
-					<span id="show20" onclick="showResult()">&#9786;</span>
-					<span id="show21" onclick="showResult()">&#9786;</span>
-					<span id="show22" onclick="showResult()">&#9786;</span>
-					<span id="show23" onclick="showResult()">&#9786;</span>
-					<span id="show24" onclick="showResult()">&#9786;</span>
-					<span id="show25" onclick="showResult()">&#9786;</span>
-					<span id="show26" onclick="showResult()">&#9786;</span>
-					<span id="show27" onclick="showResult()">&#9786;</span>
-					<span id="show28" onclick="showResult()">&#9786;</span>
-					<span id="show29" onclick="showResult()">&#9786;</span>
-					<br>
-					<span id="show10" onclick="showResult()">&#9786;</span>
-					<span id="show11" onclick="showResult()">&#9786;</span>
-					<span id="show12" onclick="showResult()">&#9786;</span>
-					<span id="show13" onclick="showResult()">&#9786;</span>
-					<span id="show14" onclick="showResult()">&#9786;</span>
-					<span id="show15" onclick="showResult()">&#9786;</span>
-					<span id="show16" onclick="showResult()">&#9786;</span>
-					<span id="show17" onclick="showResult()">&#9786;</span>
-					<span id="show18" onclick="showResult()">&#9786;</span>
-					<span id="show19" onclick="showResult()">&#9786;</span>
-					<br>
-					<span id="show" onclick="showResult()">&#9786;</span>
-					<span id="show1" onclick="showResult()">&#9786;</span>
-					<span id="show2" onclick="showResult()">&#9786;</span>
-					<span id="show3" onclick="showResult()">&#9786;</span>
-					<span id="show4" onclick="showResult()">&#9786;</span>
-					<span id="show5" onclick="showResult()">&#9786;</span>
-					<span id="show6" onclick="showResult()">&#9786;</span>
-					<span id="show7" onclick="showResult()">&#9786;</span>
-					<span id="show8" onclick="showResult()">&#9786;</span>
-					<span id="show9" onclick="showResult()">&#9786;</span>
-				</div>
-				<script>
-					function showResult() {
-					    document.getElementById("show").style.color = "red";
-							document.getElementById("show1").style.color = "red";
-							document.getElementById("show2").style.color = "red";
-							document.getElementById("show3").style.color = "red";
-							document.getElementById("show4").style.color = "red";
-							document.getElementById("show5").style.color = "red";
-							document.getElementById("show6").style.color = "red";
-							document.getElementById("show7").style.color = "red";
-							document.getElementById("show8").style.color = "red";
-							document.getElementById("show9").style.color = "red";
-							document.getElementById("show10").style.color = "red";
-							document.getElementById("show11").style.color = "red";
-							document.getElementById("show12").style.color = "red";
-							document.getElementById("show13").style.color = "red";
-							document.getElementById("show14").style.color = "red";
-							document.getElementById("show15").style.color = "red";
-							document.getElementById("show16").style.color = "red";
-							document.getElementById("show17").style.color = "red";
-							document.getElementById("show18").style.color = "red";
-							document.getElementById("show19").style.color = "red";
-							document.getElementById("show20").style.color = "red";
-							document.getElementById("show21").style.color = "red";
-							document.getElementById("show22").style.color = "red";
-							document.getElementById("show23").style.color = "red";
-							document.getElementById("show24").style.color = "red";
-							document.getElementById("show25").style.color = "red";
-							document.getElementById("show26").style.color = "red";
-							document.getElementById("show27").style.color = "red";
-							document.getElementById("show28").style.color = "red";
-							document.getElementById("show29").style.color = "red";
-							document.getElementById("show30").style.color = "red";
-							document.getElementById("show31").style.color = "red";
-							document.getElementById("show32").style.color = "red";
-							document.getElementById("show33").style.color = "red";
-							document.getElementById("show34").style.color = "red";
-							document.getElementById("show35").style.color = "red";
-							document.getElementById("show36").style.color = "red";
-							document.getElementById("show37").style.color = "red";
-					}
-				</script>
-			</td>
-		</tr>
-	</table>
+		<br>
+			<table width="80%">
+			<tr>
+				<td align="right" width="40%">
+					<p style="font-size:2em; color:grey">&#9787; Your guess</p>
+					<p style="font-size:2em; color:red">&#9786; The truth</p>
+				</td>
+				<td padding-right="150px">
+					<div class="rating">
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<br>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<br>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<br>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<br>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<br>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<br>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span id="show30" onclick="showResult()">&#9786;</span>
+						<span id="show31" onclick="showResult()">&#9786;</span>
+						<span id="show32" onclick="showResult()">&#9786;</span>
+						<span id="show33" onclick="showResult()">&#9786;</span>
+						<span id="show34" onclick="showResult()">&#9786;</span>
+						<span id="show35" onclick="showResult()">&#9786;</span>
+						<span id="show36" onclick="showResult()">&#9786;</span>
+						<span id="show37" onclick="showResult()">&#9786;</span>
+						<br>
+						<span id="show20" onclick="showResult()">&#9786;</span>
+						<span id="show21" onclick="showResult()">&#9786;</span>
+						<span id="show22" onclick="showResult()">&#9786;</span>
+						<span id="show23" onclick="showResult()">&#9786;</span>
+						<span id="show24" onclick="showResult()">&#9786;</span>
+						<span id="show25" onclick="showResult()">&#9786;</span>
+						<span id="show26" onclick="showResult()">&#9786;</span>
+						<span id="show27" onclick="showResult()">&#9786;</span>
+						<span id="show28" onclick="showResult()">&#9786;</span>
+						<span id="show29" onclick="showResult()">&#9786;</span>
+						<br>
+						<span id="show10" onclick="showResult()">&#9786;</span>
+						<span id="show11" onclick="showResult()">&#9786;</span>
+						<span id="show12" onclick="showResult()">&#9786;</span>
+						<span id="show13" onclick="showResult()">&#9786;</span>
+						<span id="show14" onclick="showResult()">&#9786;</span>
+						<span id="show15" onclick="showResult()">&#9786;</span>
+						<span id="show16" onclick="showResult()">&#9786;</span>
+						<span id="show17" onclick="showResult()">&#9786;</span>
+						<span id="show18" onclick="showResult()">&#9786;</span>
+						<span id="show19" onclick="showResult()">&#9786;</span>
+						<br>
+						<span id="show" onclick="showResult()">&#9786;</span>
+						<span id="show1" onclick="showResult()">&#9786;</span>
+						<span id="show2" onclick="showResult()">&#9786;</span>
+						<span id="show3" onclick="showResult()">&#9786;</span>
+						<span id="show4" onclick="showResult()">&#9786;</span>
+						<span id="show5" onclick="showResult()">&#9786;</span>
+						<span id="show6" onclick="showResult()">&#9786;</span>
+						<span id="show7" onclick="showResult()">&#9786;</span>
+						<span id="show8" onclick="showResult()">&#9786;</span>
+						<span id="show9" onclick="showResult()">&#9786;</span>
+					</div>
+					<script>
+						function showResult() {
+						    document.getElementById("show").style.color = "red";
+								document.getElementById("show1").style.color = "red";
+								document.getElementById("show2").style.color = "red";
+								document.getElementById("show3").style.color = "red";
+								document.getElementById("show4").style.color = "red";
+								document.getElementById("show5").style.color = "red";
+								document.getElementById("show6").style.color = "red";
+								document.getElementById("show7").style.color = "red";
+								document.getElementById("show8").style.color = "red";
+								document.getElementById("show9").style.color = "red";
+								document.getElementById("show10").style.color = "red";
+								document.getElementById("show11").style.color = "red";
+								document.getElementById("show12").style.color = "red";
+								document.getElementById("show13").style.color = "red";
+								document.getElementById("show14").style.color = "red";
+								document.getElementById("show15").style.color = "red";
+								document.getElementById("show16").style.color = "red";
+								document.getElementById("show17").style.color = "red";
+								document.getElementById("show18").style.color = "red";
+								document.getElementById("show19").style.color = "red";
+								document.getElementById("show20").style.color = "red";
+								document.getElementById("show21").style.color = "red";
+								document.getElementById("show22").style.color = "red";
+								document.getElementById("show23").style.color = "red";
+								document.getElementById("show24").style.color = "red";
+								document.getElementById("show25").style.color = "red";
+								document.getElementById("show26").style.color = "red";
+								document.getElementById("show27").style.color = "red";
+								document.getElementById("show28").style.color = "red";
+								document.getElementById("show29").style.color = "red";
+								document.getElementById("show30").style.color = "red";
+								document.getElementById("show31").style.color = "red";
+								document.getElementById("show32").style.color = "red";
+								document.getElementById("show33").style.color = "red";
+								document.getElementById("show34").style.color = "red";
+								document.getElementById("show35").style.color = "red";
+								document.getElementById("show36").style.color = "red";
+								document.getElementById("show37").style.color = "red";
+						}
+					</script>
+				</td>
+			</tr>
 
-
-
-
+			</table>
+		</br>
 	</div>
 
 	<div class="section" id="section1">
@@ -499,13 +480,12 @@
 			time of childbirth, and postnatal care for mothers and their newborns are all essential
 			to prevent these deaths. This is exactly what Khushi Baby, a social venture based in
 			Udaipur, is striving to do in India.
-</p>
+		</p>
 	</div>
 
 	<div class="section" id="section1">
 		<h1>Lack of access</h1>
 		<p>Visualization: number of doctors/center per inhabitants</p>
-
 	</div>
 
 	<div class="section" id="section1">
