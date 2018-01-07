@@ -46,6 +46,10 @@
 		text-align-last: center;
 	}
 
+	b {
+		color:#009A00;
+	}
+
 	#colonne {
 		padding:50px;
 		font-size: 1.5em;
@@ -53,6 +57,12 @@
 		color: #000;
 	}
 
+	.flotteLeft {
+	float:left;
+	}
+	.flotteRight {
+	float:right;
+	}
 
 	/* nice faces being selected or not
 	* --------------------------------------- */
@@ -198,7 +208,8 @@
 			<source src="imgs/sanCrisis.mp4" type="video/mp4">
 		</video>
 		<div class="layer">
-			<h1 style="text-shadow: #F5F5F5 1px 1px, #F5F5F5 -1px 1px, #F5F5F5 -1px -1px, #F5F5F5 1px -1px;">India has huge sanitary issues</h1>
+			<h1>India has huge sanitary issues</h1>
+			<p>I need to do some animation here: first the text appears then, it disappears and the video begins</p>
 		</div>
 	</div>
 
@@ -209,9 +220,9 @@
 
 			<table align="center">
 				<tr>
-					<td id="colonne" width="800"  align="justify">According to the WHO, 5.6 million children under the age of 5 years died in 2016. This translates into 15 000 under-five deaths per day. More than half of these early child deaths are due to conditions that could be prevented or treated with access to simple, affordable interventions.
-					Leading causes of death in children under-5 years are preterm birth complications, pneumonia, birth asphyxia, diarrhoea and malaria.
-					India is no exception. Despite the Indian government’s efforts to reduce the infant mortality rate, many children still die every year from poor sanitation and a lack of access to basic medical needs. India’s infant mortality is 6 times higher than that of China, and 10 times higher than in France. Rural and isolated areas are the most affected.
+					<td id="colonne" width="800"  align="justify">According to the WHO, <b>5.6 million children</b> under the age of 5 years died in 2016. This translates into <b>15 000 under-five deaths per day</b>. More than half of these early child deaths are due to conditions that could be prevented or treated with access to simple, affordable interventions.
+					Leading causes of death in children under-5 years are <b>preterm birth complications</b>, <b>pneumonia</b>, <b>birth asphyxia</b>, <b>diarrhoea</b> and <b>malaria</b>.
+					India is no exception. Despite the Indian government’s efforts to reduce the infant mortality rate, many children still die every year from <b>poor sanitation</b> and a <b>lack of access</b> to basic medical needs. India’s infant mortality is 6 times higher than that of China, and 10 times higher than in France. <b>Rural and isolated areas</b> are the most affected.
 					</td>
 					<td width="500">
 						<canvas id="chart-area" width="80" height="80"></canvas>
@@ -305,27 +316,21 @@
 	</div>
 
 	<div class="section" id="section1">
-		<video id="myVideo" loop muted data-autoplay>
-			<source src="imgs/flowers.mp4" type="video/mp4">
-
-		</video>
-		<div class="layer">
-			<h1 id="fixe">1,5 Million children die every year because they are not vaccinated</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
+			<h1>1,5 Million children die every year because they are not vaccinated</h1>
+			<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 
 
 	<div class="section" id="section1">
 		<h1>Do you know the percentage of Indian children who are not vaccinated ?</h1>
 		<br>
-			<table width="80%">
-			<tr>
-				<td align="right" width="40%">
-					<p style="font-size:2em; color:grey">&#9787; Your guess</p>
-					<p style="font-size:2em; color:red">&#9786; The truth</p>
+			<table >
+			<tr VALIGN=TOP>
+				<td align="right" width="21%">
+					<p style="color:grey">&#9787; Your guess</p>
+					<p style="color:red">&#9786; The truth</p>
 				</td>
-				<td padding-right="150px">
+				<td width="50%">
 					<div class="rating">
 						<span onclick="showResult()">&#9786;</span>
 						<span onclick="showResult()">&#9786;</span>
@@ -480,6 +485,9 @@
 						}
 					</script>
 				</td>
+				<td align="right" width="40%">
+					<p style="color:grey">Some exemples to help you choose</p>
+				</td>
 			</tr>
 
 			</table>
@@ -489,28 +497,34 @@
 	<div class="section" id="section1">
 		<h1>This is the reality</h1>
 		<p>Compared to other countries, India’s percentage of fully immunized children is
-			very low. Though it has improved over the past decade, 38% of Indian children aged
-			12 to 23 months are still not fully immunized (for common and life threatening
+			<b>very low</b>. Though it has improved over the past decade, <b>38% of Indian children aged
+			12 to 23 months are still not fully immunized</b> (for common and life threatening
 			diseases such as polio or measles). This situation has two main causes: the lack of
 			health and sanitary infrastructures, and low awareness about the importance of
 			pregnancy monitoring and child vaccination.
 			<br>
-			According to the WHO, a child's risk of dying is highest in the first 28 days of
-			life (the neonatal period). Improving the quality of antenatal care, care at the
+			According to the WHO, a child's risk of dying is <b>highest in the first 28 days of
+			life</b> (the neonatal period). Improving the quality of antenatal care, care at the
 			time of childbirth, and postnatal care for mothers and their newborns are all essential
-			to prevent these deaths. This is exactly what Khushi Baby, a social venture based in
+			to prevent these deaths. This is exactly what <b>Khushi Baby</b>, a social venture based in
 			Udaipur, is striving to do in India.
 		</p>
 	</div>
 
 	<div class="section" id="section1">
 		<h1>Lack of access</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p class="flotteLeft">
+		 <img width="400" src="imgs/indianMother.jpg"/>
+		</p>
+		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 
 	<div class="section" id="section1">
 		<h1>Lack of knowledge</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p class="flotteRight">
+		 <img width="350" src="imgs/medecineKnowledge.jpg"/>
+		</p>
+		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 
 	<div class="section" id="section1">
@@ -519,28 +533,28 @@
 			<tr VALIGN=TOP>
 				<td width="33.3%">
 					<img src="imgs/syringe.jpg">
-					<h5>
+					<p>
 						Without reliable health records, clinical decision making on the part of
 						community health workers is erroneous and inefficient at the point of care
 						where connectivity is rarely available.
-				</h5>
+				</p>
 				</td>
 				<td width="33.3%">
 					<img src="imgs/mother.jpg">
-					<h5>
+					<p>
 						Many mothers don't understand the importance
 						of antenatal care visits and vaccines, or how many are needed before and after birth.
-					</h5>
+					</p>
 				</td>
 				<td width="33.3%">
 					<img src="imgs/data_book.jpg">
-					<h5>
+					<p>
 						Current data collection methods at the last mile
 						are outdated, cumbersome, and lack patient specificity. Health officials are missing
 						real-time, actionable maternal and child health data, preventing community-level
 						monitoring of which babies are missing their vaccines and which mothers are at risk of
 						birth complications.
-					</h5>
+					</p>
 				</td>
 			</tr>
 		</table>
@@ -548,13 +562,13 @@
 
 	<div class="section" id="section1">
 		<h1>What KhushiBaby have done yet</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 
 	<div class="section" id="section1">
 		<h1>We need your help to realize our vision:
 			<br>that no	mother or infant be left without their due health services</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 
 	<div class="section" id="section1">
@@ -575,7 +589,7 @@
 
 	<div class="section" id="section1">
 		<h1>Credits yeah</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 <!-- Don't suppress !-->
 </div>
