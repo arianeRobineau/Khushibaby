@@ -57,6 +57,11 @@
 		color: #000;
 	}
 
+	#percentage {
+		color:white;
+		font-size:50px;
+	}
+
 	.flotteLeft {
 	float:left;
 	}
@@ -329,6 +334,7 @@
 				<td align="right" width="21%">
 					<p style="color:grey">&#9787; Your guess</p>
 					<p style="color:red">&#9786; The truth</p>
+					<p id="percentage">39%</p>
 				</td>
 				<td width="50%">
 					<div class="rating">
@@ -482,6 +488,8 @@
 								document.getElementById("show35").style.color = "red";
 								document.getElementById("show36").style.color = "red";
 								document.getElementById("show37").style.color = "red";
+
+								document.getElementById("percentage").style.color = "red";
 						}
 					</script>
 				</td>
@@ -588,8 +596,15 @@
 	</div>
 
 	<div class="section" id="section1">
-		<h1>Credits yeah</h1>
-		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h1>Credits & Acknowledgments</h1>
+		<p>This vizualisation was created by Perrine Legoullon, Lucas Martinez Sadivan and Ariane Robineau. We would like to thank the <b id="important"><a href="http://www.khushibaby.org/">Khushi Baby</a></b> team for sharing their data with us and allowing us to work on this project.
+			We would also like to thank our professor, Samuel Huron.<br><br>
+			<b><u>Sources used:</b></u> <br>
+			<a href="http://www.censusindia.gov.in/vital_statistics/AHSBulletins/AHS_Factsheets_2012_13.html"><u id="lien">Census of India, Indian Government</u></a><br>
+			<a href="http://rchiips.org/NFHS/factsheet_NFHS-4.shtml"><u id="lien">National Family Health Survey, India</u></a><br>
+			WHO databases <br>
+			Database provided by Khushi Baby <br>
+		</p>
 	</div>
 <!-- Don't suppress !-->
 </div>
