@@ -43,7 +43,6 @@
 	 	padding: 80px;
 		color:#000;
 		text-align: justify;
-		text-align-last: center;
 	}
 
 	b {
@@ -61,6 +60,11 @@
 		color:white;
 		font-size:50px;
 	}
+
+	#lien{
+		color: blue
+	}
+
 
 	.flotteLeft {
 	float:left;
@@ -321,8 +325,8 @@
 	</div>
 
 	<div class="section" id="section1">
-			<h1>1,5 Million children die every year because they are not vaccinated</h1>
-			<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h1>Death has to be avoided</h1>
+			<p>1,5 Million Indian children die every year because they are not vaccinated</p>
 	</div>
 
 
@@ -332,9 +336,9 @@
 			<table >
 			<tr VALIGN=TOP>
 				<td align="right" width="21%">
-					<p style="color:grey">&#9787; Your guess</p>
-					<p style="color:red">&#9786; The truth</p>
-					<p id="percentage">39%</p>
+					<p style="color:grey;">&#9787; Your guess</p>
+					<p style="color:red; margin-top:-80px;">&#9787; The truth</p>
+					<p id="percentage" style="text-align:right;">39%</p>
 				</td>
 				<td width="50%">
 					<div class="rating">
@@ -493,10 +497,27 @@
 						}
 					</script>
 				</td>
-				<td align="right" width="40%">
-					<p style="color:grey">Some exemples to help you choose</p>
+				<td  width="40%">
+					<p style="color:grey">Some exemples to help you guess</p>
+					<p id="image"></p>
+			    <form>
+				    <select id="countries" name="nom" size="1" onchange="changeImage(this.value)">
+					    <option value="fr"> France
+					    <option value="usa"> United States
+					    <option value="chi"> China
+					    <option value="wor"> The world
+				    </select>
+				</form>
+				<div>
+					innerHtml
+				</div>
 				</td>
 			</tr>
+			<script type="text/javascript">
+			function changeImage(id) {
+				return document.getElementById(id);
+			}
+			</script>
 
 			</table>
 		</br>
@@ -524,11 +545,12 @@
 		<p class="flotteLeft">
 		 <img width="400" src="imgs/indianMother.jpg"/>
 		</p>
-		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Indian mothers have very few access to medical care in the country. As a matter of fact, there are only 0,2 doctors for 1000 persons,
+		and even if this number is increasing it's still not enough for the 376 inhabitants per km² </p>
 	</div>
 
 	<div class="section" id="section1">
-		<h1>Lack of knowledge</h1>
+		<h1>Lack of knowledge and means</h1>
 		<p class="flotteRight">
 		 <img width="350" src="imgs/medecineKnowledge.jpg"/>
 		</p>
@@ -537,31 +559,26 @@
 
 	<div class="section" id="section1">
 		<h1>What is KhushiBaby ?</h1>
+		<p>Could be 3 slides to describe what is KhushiBaby with simple visualisation such as numbers (age, impact, team etc), images and explanations</p>
 		<table>
 			<tr VALIGN=TOP>
 				<td width="33.3%">
-					<img src="imgs/syringe.jpg">
+					<h1>Start-Up</h1>
 					<p>
-						Without reliable health records, clinical decision making on the part of
-						community health workers is erroneous and inefficient at the point of care
-						where connectivity is rarely available.
+						DONE
 				</p>
 				</td>
 				<td width="33.3%">
-					<img src="imgs/mother.jpg">
+					<h1>Real Impact</h1>
 					<p>
-						Many mothers don't understand the importance
-						of antenatal care visits and vaccines, or how many are needed before and after birth.
+						15 000 necklaces ditributed <br> 3000 mothers enrolled <br> more than 600 villages
 					</p>
 				</td>
 				<td width="33.3%">
-					<img src="imgs/data_book.jpg">
+					<h1>Innovation</h1>
 					<p>
-						Current data collection methods at the last mile
-						are outdated, cumbersome, and lack patient specificity. Health officials are missing
-						real-time, actionable maternal and child health data, preventing community-level
-						monitoring of which babies are missing their vaccines and which mothers are at risk of
-						birth complications.
+						new concept adapted to Indian's affordability
+						<br> how it works (image in KB report)
 					</p>
 				</td>
 			</tr>
@@ -569,18 +586,29 @@
 	</div>
 
 	<div class="section" id="section1">
-		<h1>What KhushiBaby have done yet</h1>
-		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h1>The Start Up</h1>
+		<p>KhushiBaby's mission is to motivate and monitor the <b>health care of mothers and children</b> to the last mile.
+			That's why they built an <b>inexpensive digital necklace</b> that makes medical history wearable.</p>
+			<img height="350" src="imgs/3ans.png"/>
+
+		<p>
+			500 k$ raised<br> </p>
 	</div>
 
 	<div class="section" id="section1">
-		<h1>We need your help to realize our vision:
-			<br>that no	mother or infant be left without their due health services</h1>
+		<h1>What KhushiBaby have done yet</h1>
+		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	</div>
+
+	<div class="section" id="section1">
+		<h1>What Khushi Baby are planning to do</h1>
 		<p>Lorem ipsum <b>ceci est un truc important</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <b>oh la aussi</b> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <b>et on finit sur un dernier truc important</b>occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 
 	<div class="section" id="section1">
 		<h1>Call to action 2</h1>
+		<p>Go and visit their website, help them, contact them</p>
 		<p>Visu interactive : if you donate this much, it’ll help the project in that way (villages, children, necklaces, tablets, etc. appear)</p>
 		<style type="text/css">
 			.input {
@@ -597,7 +625,7 @@
 
 	<div class="section" id="section1">
 		<h1>Credits & Acknowledgments</h1>
-		<p>This vizualisation was created by Perrine Legoullon, Lucas Martinez Sadivan and Ariane Robineau. We would like to thank the <b id="important"><a href="http://www.khushibaby.org/">Khushi Baby</a></b> team for sharing their data with us and allowing us to work on this project.
+		<p>This vizualisation was created by Perrine Legoullon, Lucas Martinez Sadivan and Ariane Robineau. We would like to thank the <b><a href="http://www.khushibaby.org/">Khushi Baby</a></b> team for sharing their data with us and allowing us to work on this project.
 			We would also like to thank our professor, Samuel Huron.<br><br>
 			<b><u>Sources used:</b></u> <br>
 			<a href="http://www.censusindia.gov.in/vital_statistics/AHSBulletins/AHS_Factsheets_2012_13.html"><u id="lien">Census of India, Indian Government</u></a><br>
