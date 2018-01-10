@@ -34,12 +34,11 @@
 		font-size: 4.5em;
 		font-family: 'Pathway Gothic One', sans-serif;
 		color: #000;
-		margin-left: auto;
-		margin-right: auto;
+
 	}
 
-	p {
-		font-size: 1.75em;
+	p, td {
+		font-size: 1.5em;
 		font-family: 'Roboto', sans-serif;
 	 	padding: 80px;
 		color:#000;
@@ -74,8 +73,30 @@
 	float:right;
 	}
 
+
 	/* nice faces being selected or not
 	* --------------------------------------- */
+	#heads {
+		font-size: 0.85em;
+		color: grey;
+		margin-top: -50px;
+		margin-left: -100px;
+		margin-right: -100px;
+	}
+
+	#explanation {
+		font-size: 1.5em;
+		margin-top: -75px;
+		margin-left: -100px;
+		margin-right: -100px;
+	}
+	#explanation2 {
+		font-size: 1.5em;
+		margin-top: -75px;
+		margin-left: -200px;
+		margin-right: 0px;
+	}
+
 	.rating {
   unicode-bidi: bidi-override;
   direction: rtl;
@@ -91,6 +112,10 @@
 	.rating > span:hover ~ span:before {
 	   content: "\263B";
 	   position: absolute;
+	}
+
+	.nothing {
+
 	}
 
 	/* Centered texts in each section
@@ -112,6 +137,9 @@
 		transform: translate3d(0,0,0);
 	}
 
+	.div {
+		width: 50%;
+	}
 
 	/*solves problem with overflowing video in Mac with Chrome */
 	#section0{
@@ -208,19 +236,6 @@
 	<div class="section" id="section1">
 		<img width="35%" src="imgs/logo1.png"/>
 	</div>
-
-
-	<div class="section " id="section1">
-		<!--<video id="myVideo" loop muted data-autoplay>
-			<source src="imgs/sanCrisis.mp4" type="video/mp4">
-		</video> !-->
-
-		<div class="layer">
-			<h1>India has huge sanitary issues</h1>
-			<p>Some images to replace the video</p>
-		</div>
-	</div>
-
 
 
 	<div class="section" id="section1">
@@ -339,17 +354,19 @@
 
 
 	<div class="section" id="section1">
-		<h1>Do you know the percentage of Indian children who are not vaccinated ?</h1>
+		<h1>The vaccination gap</h1>
 		<br>
 			<table >
 			<tr VALIGN=TOP>
-				<td align="right" width="21%">
-					<p style="color:grey;">&#9787; Your guess</p>
-					<p style="color:red; margin-top:-80px;">&#9787; The truth</p>
-					<p id="percentage" style="text-align:right;">39%</p>
+				<td id="heads" align="right" >
+					<p id="explanation">Here are 100 heads. Each head represents an Indian child (12-23 months old).
+						Can you guess how many of them are not vaccinated ?</p>
+					<p id="explanation" style="color:grey;">&#9787; Your guess</p>
+					<p id="explanation" style="color:red;">&#9787; What data shows </p>
+					<p id="percentage" style="text-align:right; margin-top:-150px;">39%</p>
 				</td>
-				<td width="50%">
-					<div class="rating">
+				<td id="heads" width="50%">
+					<div id="visuBaby" class="rating" onclick="changeClass()" style="margin-left:-100px;">
 						<span onclick="showResult()">&#9786;</span>
 						<span onclick="showResult()">&#9786;</span>
 						<span onclick="showResult()">&#9786;</span>
@@ -461,10 +478,16 @@
 						<span id="show9" onclick="showResult()">&#9786;</span>
 					</div>
 					<script>
+						function changeClass() {
+								document.getElementsById("visuBaby").className = "nothing";
+						}
 						function showResult() {
 						    document.getElementById("show").style.color = "red";
+								document.getElementById("show").innerHTML = "&#9785;";
 								document.getElementById("show1").style.color = "red";
+								document.getElementById('show1').innerHTML = '&#9785;';
 								document.getElementById("show2").style.color = "red";
+								document.getElementById('show2').innerHTML = '&#9785;';
 								document.getElementById("show3").style.color = "red";
 								document.getElementById("show4").style.color = "red";
 								document.getElementById("show5").style.color = "red";
@@ -502,28 +525,35 @@
 								document.getElementById("show37").style.color = "red";
 
 								document.getElementById("percentage").style.color = "red";
+
 						}
 					</script>
 				</td>
-				<td  width="40%">
-					<p style="color:grey">Some exemples to help you guess</p>
+				<td id="heads">
+					<p id="explanation2">Some exemples to help you guess</p>
+					<form id="explanation2">
+						<select id="countries" name="nom" size="1" onchange="changeImage(this.value)">
+							<option value="fr"> France
+							<option value="usa"> United States
+							<option value="chi"> China
+							<option value="wor"> The world
+						</select>
+					</form>
 					<p id="image"></p>
-			    <form>
-				    <select id="countries" name="nom" size="1" onchange="changeImage(this.value)">
-					    <option value="fr"> France
-					    <option value="usa"> United States
-					    <option value="chi"> China
-					    <option value="wor"> The world
-				    </select>
-				</form>
-				<div>
-					innerHtml
+				<div id="country">
+					<img width="200" src="imgs/team.png">
 				</div>
 				</td>
 			</tr>
 			<script type="text/javascript">
+
 			function changeImage(id) {
-				return document.getElementById(id);
+				if (id == "China") {
+					document.getElementById("image").innerHTML="<img width=\"200\" src=\"imgs/mothers1.png\">";
+				}
+				if (id == "France") {
+					document.getElementById("image").innerHTML="<img width=\"200\" src=\"imgs/medecineKnowledge.png\">";
+				}
 			}
 			</script>
 
