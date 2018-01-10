@@ -93,7 +93,7 @@
 	#explanation2 {
 		font-size: 1.5em;
 		margin-top: -75px;
-		margin-left: -200px;
+		margin-left: -450px;
 		margin-right: 0px;
 	}
 
@@ -247,7 +247,7 @@
 					Leading causes of death in children under-5 years are <b>preterm birth complications</b>, <b>pneumonia</b>, <b>birth asphyxia</b>, <b>diarrhoea</b> and <b>malaria</b>.
 					India is no exception. Despite the Indian government’s efforts to reduce the infant mortality rate, many children still die every year from <b>poor sanitation</b> and a <b>lack of access</b> to basic medical needs. India’s infant mortality is 6 times higher than that of China, and 10 times higher than in France. <b>Rural and isolated areas</b> are the most affected.
 					</td>
-					<td width="500">
+					<td width="600">
 						<canvas id="chart-area" width="80" height="80"></canvas>
 					</td>
 				</tr>
@@ -358,12 +358,12 @@
 		<br>
 			<table >
 			<tr VALIGN=TOP>
-				<td id="heads" align="right" >
+				<td id="heads" >
 					<p id="explanation">Here are 100 heads. Each head represents an Indian child (12-23 months old).
 						Can you guess how many of them are not vaccinated ?</p>
 					<p id="explanation" style="color:grey;">&#9787; Your guess</p>
 					<p id="explanation" style="color:red;">&#9787; What data shows </p>
-					<p id="percentage" style="text-align:right; margin-top:-150px;">39%</p>
+					<p id="percentage" style="text-align:right; margin-top:-150px;">36%</p>
 				</td>
 				<td id="heads" width="50%">
 					<div id="visuBaby" class="rating" onclick="changeClass()" style="margin-left:-100px;">
@@ -435,14 +435,14 @@
 						<br>
 						<span onclick="showResult()">&#9786;</span>
 						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
+						<span onclick="showResult()">&#9786;</span>
 						<span id="show30" onclick="showResult()">&#9786;</span>
 						<span id="show31" onclick="showResult()">&#9786;</span>
 						<span id="show32" onclick="showResult()">&#9786;</span>
 						<span id="show33" onclick="showResult()">&#9786;</span>
 						<span id="show34" onclick="showResult()">&#9786;</span>
 						<span id="show35" onclick="showResult()">&#9786;</span>
-						<span id="show36" onclick="showResult()">&#9786;</span>
-						<span id="show37" onclick="showResult()">&#9786;</span>
 						<br>
 						<span id="show20" onclick="showResult()">&#9786;</span>
 						<span id="show21" onclick="showResult()">&#9786;</span>
@@ -483,11 +483,8 @@
 						}
 						function showResult() {
 						    document.getElementById("show").style.color = "red";
-								document.getElementById("show").innerHTML = "&#9785;";
 								document.getElementById("show1").style.color = "red";
-								document.getElementById('show1').innerHTML = '&#9785;';
 								document.getElementById("show2").style.color = "red";
-								document.getElementById('show2').innerHTML = '&#9785;';
 								document.getElementById("show3").style.color = "red";
 								document.getElementById("show4").style.color = "red";
 								document.getElementById("show5").style.color = "red";
@@ -521,41 +518,31 @@
 								document.getElementById("show33").style.color = "red";
 								document.getElementById("show34").style.color = "red";
 								document.getElementById("show35").style.color = "red";
-								document.getElementById("show36").style.color = "red";
-								document.getElementById("show37").style.color = "red";
 
 								document.getElementById("percentage").style.color = "red";
-
 						}
 					</script>
 				</td>
 				<td id="heads">
 					<p id="explanation2">Some exemples to help you guess</p>
-					<form id="explanation2">
-						<select id="countries" name="nom" size="1" onchange="changeImage(this.value)">
-							<option value="fr"> France
-							<option value="usa"> United States
-							<option value="chi"> China
-							<option value="wor"> The world
+
+					<form style="margin-left: -350px;margin-top:-50px">
+						<select id="countries" name="countries" size="1" onchange="changeImage(this)">
+							<option value="imgs/france.png"> France
+							<option value="imgs/usa.png"> United States
+							<option value="imgs/china"> China
+							<option value="imgs/"> The world
 						</select>
 					</form>
-					<p id="image"></p>
-				<div id="country">
-					<img width="200" src="imgs/team.png">
-				</div>
+					<span id="country" style="margin-top:0px;margin-left: -350px;margin-right: 0px;"></span>
+
+					<script type="text/javascript">
+					function changeImage(countries) {
+						document.getElementById("country" ).innerHTML = "<img width=\"200\"src=" + countries.options[countries.selectedIndex].value + ">"
+					}
+					</script>
 				</td>
 			</tr>
-			<script type="text/javascript">
-
-			function changeImage(id) {
-				if (id == "China") {
-					document.getElementById("image").innerHTML="<img width=\"200\" src=\"imgs/mothers1.png\">";
-				}
-				if (id == "France") {
-					document.getElementById("image").innerHTML="<img width=\"200\" src=\"imgs/medecineKnowledge.png\">";
-				}
-			}
-			</script>
 
 			</table>
 		</br>
