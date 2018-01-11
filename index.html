@@ -34,13 +34,17 @@
 		font-size: 4.5em;
 		font-family: 'Pathway Gothic One', sans-serif;
 		color: #000;
-
+	}
+	h2 {
+		font-size: 2.5em;
+		font-family: 'Pathway Gothic One', sans-serif;
+		color: #000;
 	}
 
 	p, td {
 		font-size: 1.5em;
 		font-family: 'Roboto', sans-serif;
-	 	padding: 80px;
+		padding: 80px;
 		color:#000;
 		text-align: justify;
 	}
@@ -48,6 +52,8 @@
 	b {
 		color: #009A00;
 	}
+
+
 
 	#colonne {
 		padding:50px;
@@ -63,6 +69,11 @@
 
 	#lien{
 		color: blue
+	}
+
+	#small {
+		font-size: 1em;
+		margin-top: -100px;
 	}
 
 
@@ -234,7 +245,9 @@
 
 
 	<div class="section" id="section1">
-		<img width="35%" src="imgs/logo1.png"/>
+		<img width="33%" src="imgs/logo1.png"/ style="margin-top:-50px;">
+		<h2 style="margin-top:-100px;">Bridging India’s immunization gap with wearables and data</h2>
+		<img width="80px" src="imgs/scroll-down.gif"/ style="margin-top:-5px;">
 	</div>
 
 	<div class="section" id="section1">
@@ -366,10 +379,12 @@
 			<tr VALIGN=TOP>
 				<td id="heads" >
 					<p id="explanation">Here are 100 heads. Each head represents an Indian child (12-23 months old).
-						Can you guess how many of them are not fully vaccinated ?</p>
+						Can you guess how many of them are not fully vaccinated ? <br>
+					<font size="2">Please keep in mind that data on immunization is produced by countries themselves, and each country sets its own
+						legislation regarding the obligatory nature of certain vaccines.</font ></p>
 					<p id="explanation" style="color:grey;">&#9787; Your guess</p>
 					<p id="explanation" style="color:red;">&#9787; What data shows </p>
-					<p id="percentage" style="text-align:right; margin-top:-150px;">36%</p>
+					<p id="percentage" style="text-align:right; margin-top:-200px;">36%</p>
 				</td>
 				<td id="heads" width="50%">
 					<div id="visuBaby" class="rating" onclick="changeClass()" style="margin-left:-100px;">
@@ -532,7 +547,7 @@
 				<td id="heads">
 					<p id="explanation2">Some examples (the red heads represent the non-vaccinated children)</p>
 
-					<form style="margin-left: -350px;margin-top:-50px">
+					<form style="margin-left: -300px;margin-top:-50px">
 						<select id="countries" name="countries" size="1" onchange="changeImage(this)">
 							<option value="imgs/france.png"> France
 							<option value="imgs/usa.png"> United States
