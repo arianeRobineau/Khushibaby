@@ -192,88 +192,19 @@
 		right: 50px;
 	}
 
-	/* Static graph
+	/* A nice static barchart
 	* --------------------------------------- */
-	dl {
-	  display: flex;
-	  background-color: white;
-	  flex-direction: column;
-	  width: 100%;
-	  max-width: 700px;
-	  position: relative;
-	  padding: 20px;
+	.bar {
+	  fill: #009A00;
 	}
 
-	dt {
-	  align-self: flex-start;
-	  width: 100%;
-	  font-weight: 700;
-	  display: block;
-	  text-align: center;
-	  font-size: 1.2em;
-	  font-weight: 700;
-	  margin-bottom: 20px;
-	  margin-left: 130px;
+	.bar:hover {
+	  fill: #006400;
 	}
 
-	.text {
-	  font-weight: 600;
-	  display: flex;
-	  align-items: center;
-	  height: 40px;
-	  width: 130px;
-	  background-color: white;
-	  position: absolute;
-	  left: 0;
-	  justify-content: flex-end;
+	.axis--x path {
+	  display: none;
 	}
-
-	.percentage {
-	  font-size: .8em;
-	  line-height: 1;
-	  text-transform: uppercase;
-	  width: 100%;
-	  height: 40px;
-	  margin-left: 130px;
-	  background: repeating-linear-gradient(
-	  to right,
-	  #ddd,
-	  #ddd 1px,
-	  #fff 1px,
-	  #fff 5%
-	);
-
-	  &:after {
-	    content: "";
-	    display: block;
-	    background-color: #3d9970;
-	    width: 50px;
-	    margin-bottom: 10px;
-	    height: 90%;
-	    position: relative;
-	    top: 50%;
-	    transform: translateY(-50%);
-	    transition: background-color .3s ease;
-	    cursor: pointer;
-	  }
-	  &:hover,
-	  &:focus {
-	    &:after {
-	       background-color: #aaa;
-	    }
-	  }
-	}
-
-	@for $i from 1 through 100 {
-	  .percentage-#{$i} {
-	    &:after {
-	      $value: ($i * 1%);
-	      width: $value;
-	    }
-	  }
-	}
-
-
 
 	/* Bottom menu
 	* --------------------------------------- */
@@ -667,13 +598,60 @@
 		<p class="flotteLeft">
 		 <img width="400" src="imgs/anm.jpg"/>
 		</p>
-		<p>Indian mothers have very few access to medical care in the country. As a matter of fact, there are only <b>0,2 doctors for 1000 persons</b>,
-		and even if this number is increasing it's still not enough for the <b>376 inhabitants per km²</b>.</p>
-		<dl>
-			<dd class="percentage percentage-10"><span class="text">Country1</span></dd>
-			<dd class="percentage percentage-49"><span class="text">Country2</span></dd>
-			<dd class="percentage percentage-16"><span class="text">Country3</span></dd>
-		</dl>
+		<p>According to The Hindu (Indian newspaper), around <b>80% of doctors serve 28% of India’s population</b>.
+			The country’s health infrastructure is inadequate to serve its large population, especially in rural and remote areas.
+			Many have to walk many kilometers on foot in order to reach the nearest health facility. As a result, <b>many Indian women
+			living in rural and remote areas are isolated from proper medical care</b>, making them more likely to have unmonitored pregnancies.</p>
+		<svg width="800" height="300" style="margin-top:-55px;"></svg>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script>
+		var svg = d3.select("svg"),
+		    margin = {top: 20, right: 20, bottom: 30, left: 40},
+		    width = +svg.attr("width") - margin.left - margin.right,
+		    height = +svg.attr("height") - margin.top - margin.bottom;
+
+		var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
+		    y = d3.scaleLinear().rangeRound([height, 0]);
+
+		var g = svg.append("g")
+		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		d3.tsv("data.tsv", function(d) {
+		  d.frequency = +d.frequency;
+		  return d;
+		}, function(error, data) {
+		  if (error) throw error;
+
+		  x.domain(data.map(function(d) { return d.letter; }));
+		  y.domain([0, 3]);
+
+		  g.append("g")
+		      .attr("class", "axis axis--x")
+		      .attr("transform", "translate(0," + height + ")")
+		      .call(d3.axisBottom(x));
+
+		  g.append("g")
+		      .attr("class", "axis axis--y")
+		      .call(d3.axisLeft(y).ticks(10, ""))
+		    .append("text")
+		      .attr("transform", "rotate(-90)")
+		      .attr("y", 6)
+		      .attr("dy", "0.71em")
+		      .attr("text-anchor", "end")
+		      ;
+
+		  g.selectAll(".bar")
+		    .data(data)
+		    .enter().append("rect")
+		      .attr("class", "bar")
+		      .attr("x", function(d) { return x(d.letter); })
+		      .attr("y", function(d) { return y(d.frequency); })
+		      .attr("width", x.bandwidth())
+		      .attr("height", function(d) { return height - y(d.frequency); });
+		});
+
+		</script>
+
 	</div>
 
 	<div class="section" id="section1">
